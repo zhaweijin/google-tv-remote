@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TVRemoteService</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    
+    <string name="please_input_code_message1">Please enter the following four verification code in  </string>
+    <string name="please_input_code_message2">  To start the control device</string>
+    <string name="please_input_code_title">Paired remote IP</string>
+    <string name="please_input_code">FFFF</string>
+    
+    <string name="button1">Button1</string>
+    <string name="button2">Button2</string>
+
+</resources>

@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:32
+-keep class com.imt.remote.remotecontrol.BootCompletedReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:38
+-keep class com.imt.remote.remotecontrol.OutputDialog { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.imt.remote.remotecontrol.RemoteControlServices { <init>(...); }
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The version number defined here is sent to the GTV box when the
+     remote connects to it. This number is compared with the one defined
+     in IpRemote/res/values/string.xml to determine if a new version is
+     available -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.imt.remote.remotecontrol"
+          android:versionCode="23"
+          android:versionName="1.0.5"
+          android:installLocation="auto">
+
+   <uses-sdk
+        android:minSdkVersion="4"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+         <!-- 
+        <activity
+            android:name="com.imt.remote.remotecontrol.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         --> 
+        <receiver android:name="BootCompletedReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+ 
+        <activity
+            android:name="com.imt.remote.remotecontrol.OutputDialog"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <service
+            android:name="com.imt.remote.remotecontrol.RemoteControlServices"
+            android:exported="true" >
+        </service>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-feature android:required="true" android:name="android.hardware.touchscreen" />
+    <uses-feature android:required="true" android:name="android.hardware.wifi" />
+    <!--  
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    -->
+    <supports-screens android:smallScreens="false" />
+</manifest>

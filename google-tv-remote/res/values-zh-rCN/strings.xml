@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TVRemoteService</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    
+    <string name="please_input_code_message1">请输入以下四位验证码在  </string>
+    <string name="please_input_code_message2">  去启动控制设备</string>
+    <string name="please_input_code_title">配对远程IP</string>
+    <string name="please_input_code">FFFF</string>
+    
+    <string name="button1">Button1</string>
+    <string name="button2">Button2</string>
+
+</resources>

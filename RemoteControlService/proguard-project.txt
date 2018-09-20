@@ -1,0 +1,301 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+-libraryjars libs/bcprov-jdk15-143.jar
+-libraryjars libs/anymote.jar
+-libraryjars libs/polo.jar
+-libraryjars libs/protobuf-java-2.2.0-lite.jar
+
+
+#polo
+-dontwarn com.google.polo.encoding.**
+-keep class com.google.polo.encoding.** { *; }
+
+-dontwarn com.google.polo.exception.**
+-keep class com.google.polo.exception.** { *; }
+
+-dontwarn com.google.polo.json.**
+-keep class com.google.polo.json.** { *; }
+
+-dontwarn com.google.polo.pairing.**
+-keep class com.google.polo.pairing.** { *; }
+
+-dontwarn com.google.polo.pairing.message.**
+-keep class com.google.polo.pairing.message.** { *; }
+
+-dontwarn com.google.polo.ssl.**
+-keep class com.google.polo.ssl.** { *; }
+
+-dontwarn com.google.polo.wire.**
+-keep class com.google.polo.wire.** { *; }
+
+-dontwarn com.google.polo.wire.json.**
+-keep class com.google.polo.wire.json.** { *; }
+
+-dontwarn com.google.polo.wire.protobuf.**
+-keep class com.google.polo.wire.protobuf.** { *; }
+
+-dontwarn com.google.polo.wire.xml.**
+-keep class com.google.polo.wire.xml.** { *; }
+
+
+#protobuf
+-dontwarn com.google.protobuf.**
+-keep class com.google.protobuf.** {*;}
+
+#anymote
+-dontwarn com.google.anymote.**
+-keep class com.google.anymote.** { *; }
+
+-dontwarn com.google.anymote.common.**
+-keep class com.google.anymote.common.** { *; }
+
+-dontwarn com.google.anymote.devices.**
+-keep class com.google.anymote.devices.** { *; }
+
+-dontwarn com.google.anymote.server.**
+-keep class com.google.anymote.server.** { *; }
+
+#bcprov
+-dontwarn org.bouncycastle.**
+-keep class org.bouncycastle.** { *; }
+
+-dontwarn org.bouncycastle.asn1.**
+-keep class org.bouncycastle.asn1.** { *; }
+
+-dontwarn  org.bouncycastle.asn1.cmp.**
+-keep class org.bouncycastle.asn1.cmp.** { *; }
+
+-dontwarn org.bouncycastle.asn1.cms.**
+-keep class org.bouncycastle.asn1.cms.** { *; }
+
+-dontwarn org.bouncycastle.asn1.crmf.**
+-keep class org.bouncycastle.asn1.crmf.** { *; }
+
+-dontwarn org.bouncycastle.asn1.cryptopro.**
+-keep class org.bouncycastle.asn1.cryptopro.** { *; }
+
+-dontwarn org.bouncycastle.asn1.eac.**
+-keep class org.bouncycastle.asn1.eac.** { *; }
+
+-dontwarn org.bouncycastle.asn1.esf.** 
+-keep class org.bouncycastle.asn1.esf.** { *; }
+
+-dontwarn org.bouncycastle.asn1.ess.**
+-keep class org.bouncycastle.asn1.ess.** { *; }
+
+-dontwarn org.bouncycastle.asn1.gnv.**
+-keep class org.bouncycastle.asn1.gnv.** { *; }
+
+-dontwarn org.bouncycastle.asn1.ianna.**
+-keep class org.bouncycastle.asn1.ianna.** { *; }
+
+-dontwarn org.bouncycastle.asn1.icao.**
+-keep class org.bouncycastle.asn1.icao.** { *; }
+
+-dontwarn org.bouncycastle.asn1.isismtt.**
+-keep class org.bouncycastle.asn1.isismtt.** { *; }
+
+-dontwarn org.bouncycastle.asn1.isismtt.ocsp.**
+-keep class org.bouncycastle.asn1.isismtt.ocsp.** { *; }
+
+-dontwarn org.bouncycastle.asn1.isismtt.x509.**
+-keep class org.bouncycastle.asn1.isismtt.x509.** { *; }
+
+-dontwarn org.bouncycastle.asn1.kisa.**
+-keep class org.bouncycastle.asn1.kisa.** { *; }
+
+-dontwarn org.bouncycastle.asn1.microsoft.**
+-keep class org.bouncycastle.asn1.microsoft.** { *; }
+
+-dontwarn org.bouncycastle.asn1.misc.**
+-keep class org.bouncycastle.asn1.misc.** { *; }
+
+-dontwarn org.bouncycastle.asn1.mozilla.**
+-keep class org.bouncycastle.asn1.mozilla.** { *; }
+
+-dontwarn org.bouncycastle.asn1.nist.**
+-keep class org.bouncycastle.asn1.nist.** { *; }
+
+-dontwarn org.bouncycastle.asn1.ntt.**
+-keep class org.bouncycastle.asn1.ntt.** { *; }
+
+-dontwarn org.bouncycastle.asn1.ocsp.**
+-keep class org.bouncycastle.asn1.ocsp.** { *; }
+
+-dontwarn org.bouncycastle.asn1.oiw.**
+-keep class org.bouncycastle.asn1.oiw.** { *; }
+
+-dontwarn org.bouncycastle.asn1.pkcs.**
+-keep class org.bouncycastle.asn1.pkcs.** { *; }
+
+-dontwarn org.bouncycastle.asn1.sec.**
+-keep class org.bouncycastle.asn1.sec.** { *; }
+
+-dontwarn org.bouncycastle.asn1.smime.**
+-keep class org.bouncycastle.asn1.smime.** { *; }
+
+-dontwarn org.bouncycastle.asn1.teletrust.**
+-keep class org.bouncycastle.asn1.teletrust.** { *; }
+
+-dontwarn org.bouncycastle.asn1.tsp.**
+-keep class org.bouncycastle.asn1.tsp.** { *; }
+
+-dontwarn org.bouncycastle.asn1.util.**
+-keep class org.bouncycastle.asn1.util.** { *; }
+
+-dontwarn org.bouncycastle.asn1.x500.**
+-keep class org.bouncycastle.asn1.x500.** { *; }
+
+-dontwarn org.bouncycastle.asn1.x509.**
+-keep class org.bouncycastle.asn1.x509.** { *; }
+
+-dontwarn org.bouncycastle.asn1.x509.qualified.**
+-keep class org.bouncycastle.asn1.x509.qualified.** { *; }
+
+-dontwarn org.bouncycastle.asn1.x509sigi.**
+-keep class org.bouncycastle.asn1.x509sigi.** { *; }
+
+-dontwarn org.bouncycastle.asn1.x9.**
+-keep class org.bouncycastle.asn1.x9.** { *; }
+
+-dontwarn org.bouncycastle.crypto.**
+-keep class org.bouncycastle.crypto.** { *; }
+
+-dontwarn org.bouncycastle.crypto.agreement.**
+-keep class org.bouncycastle.crypto.agreement.** { *; }
+
+-dontwarn org.bouncycastle.crypto.agreement.kdf.**
+-keep class org.bouncycastle.crypto.agreement.kdf.** { *; }
+
+-dontwarn org.bouncycastle.crypto.agreement.srp.**
+-keep class org.bouncycastle.crypto.agreement.srp.** { *; }
+
+-dontwarn org.bouncycastle.crypto.digests.**
+-keep class org.bouncycastle.crypto.digests.** { *; }
+
+-dontwarn org.bouncycastle.crypto.encodings.**
+-keep class org.bouncycastle.crypto.encodings.** { *; }
+
+-dontwarn org.bouncycastle.crypto.engines.**
+-keep class org.bouncycastle.crypto.engines.** { *; }
+
+-dontwarn org.bouncycastle.crypto.examples.**
+-keep class org.bouncycastle.crypto.examples.** { *; }
+
+-dontwarn org.bouncycastle.crypto.generators.**
+-keep class org.bouncycastle.crypto.generators.** { *; }
+
+-dontwarn org.bouncycastle.crypto.io.**
+-keep class org.bouncycastle.crypto.io.** { *; }
+
+-dontwarn org.bouncycastle.crypto.macs.**
+-keep class org.bouncycastle.crypto.macs.** { *; }
+
+-dontwarn org.bouncycastle.crypto.modes.**
+-keep class org.bouncycastle.crypto.modes.** { *; }
+
+-dontwarn org.bouncycastle.crypto.paddings.**
+-keep class org.bouncycastle.crypto.paddings.** { *; }
+
+-dontwarn org.bouncycastle.crypto.params.**
+-keep class org.bouncycastle.crypto.params.** { *; }
+
+-dontwarn org.bouncycastle.crypto.prng.**
+-keep class org.bouncycastle.crypto.prng.** { *; }
+
+-dontwarn org.bouncycastle.crypto.signers.**
+-keep class org.bouncycastle.crypto.signers.** { *; }
+
+-dontwarn org.bouncycastle.crypto.tls.**
+-keep class org.bouncycastle.crypto.tls.** { *; }
+
+-dontwarn org.bouncycastle.crypto.util.**
+-keep class org.bouncycastle.crypto.util.** { *; }
+
+-dontwarn org.bouncycastle.i18n.**
+-keep class org.bouncycastle.i18n.** { *; }
+
+-dontwarn org.bouncycastle.i18n.filter.**
+-keep class org.bouncycastle.i18n.filter.** { *; }
+
+-dontwarn org.bouncycastle.jce.**
+-keep class org.bouncycastle.jce.** { *; }
+
+-dontwarn org.bouncycastle.jce.examples.**
+-keep class org.bouncycastle.jce.examples.** { *; }
+
+-dontwarn org.bouncycastle.jce.exception.**
+-keep class org.bouncycastle.jce.exception.** { *; }
+
+-dontwarn org.bouncycastle.jce.interfaces.**
+-keep class org.bouncycastle.jce.interfaces.** { *; }
+
+-dontwarn org.bouncycastle.jce.netscape.**
+-keep class org.bouncycastle.jce.netscape.** { *; }
+
+-dontwarn org.bouncycastle.jce.provider.**
+-keep class org.bouncycastle.jce.provider.** { *; }
+
+-dontwarn org.bouncycastle.jce.provider.asymmetric.**
+-keep class org.bouncycastle.jce.provider.asymmetric.** { *; }
+
+-dontwarn org.bouncycastle.jce.spec.**
+-keep class org.bouncycastle.jce.spec.** { *; }
+
+-dontwarn org.bouncycastle.math.ec.**
+-keep class org.bouncycastle.math.ec.** { *; }
+
+-dontwarn org.bouncycastle.mozilla.**
+-keep class org.bouncycastle.mozilla.** { *; }
+
+-dontwarn org.bouncycastle.ocsp.**
+-keep class org.bouncycastle.ocsp.** { *; }
+
+-dontwarn org.bouncycastle.openssl.**
+-keep class org.bouncycastle.openssl.** { *; }
+
+-dontwarn org.bouncycastle.util.**
+-keep class org.bouncycastle.util.** { *; }
+
+-dontwarn org.bouncycastle.util.encoders.**
+-keep class org.bouncycastle.util.encoders.** { *; }
+
+-dontwarn org.bouncycastle.util.io.**
+-keep class org.bouncycastle.util.io.** { *; }
+
+-dontwarn org.bouncycastle.util.test.**
+-keep class org.bouncycastle.util.test.** { *; }
+
+-dontwarn org.bouncycastle.voms.**
+-keep class org.bouncycastle.voms.** { *; }
+
+-dontwarn org.bouncycastle.x509.**
+-keep class org.bouncycastle.x509.** { *; }
+
+-dontwarn org.bouncycastle.x509.examples.**
+-keep class org.bouncycastle.x509.examples.** { *; }
+
+-dontwarn org.bouncycastle.x509.extension.**
+-keep class org.bouncycastle.x509.extension.** { *; }
+
+-dontwarn org.bouncycastle.x509.util.**
+-keep class org.bouncycastle.x509.util.** { *; }
